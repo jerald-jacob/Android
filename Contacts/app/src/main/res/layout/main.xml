@@ -38,20 +38,21 @@
         android:text="@string/button_send" />
 
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="142dp"
-        android:layout_y="97dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="137dp"
-        android:layout_y="242dp"
+        android:layout_x="122dp"
+        android:layout_y="283dp"
         android:text="Enter Login details" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="77dp"
+        android:layout_y="13dp"
+        app:srcCompat="@drawable/login_image"
+        android:contentDescription="TODO" />
 
 </AbsoluteLayout>
