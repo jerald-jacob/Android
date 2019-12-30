@@ -10,9 +10,11 @@
         android:layout_height="wrap_content"
         android:layout_x="71dp"
         android:layout_y="335dp"
+        android:width="320dp"
         android:ems="10"
-        android:hint="Username"
-        android:inputType="textEmailAddress" />
+        android:hint="@string/username"
+        android:inputType="textEmailAddress"
+        android:text="@string/username" />
 
     <EditText
         android:id="@+id/editText2"
@@ -20,9 +22,11 @@
         android:layout_height="wrap_content"
         android:layout_x="75dp"
         android:layout_y="412dp"
+        android:width="320dp"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="numberPassword" />
+        android:hint="@string/password"
+        android:inputType="numberPassword"
+        android:text="@string/password" />
 
     <Button
         android:id="@+id/button"
@@ -30,7 +34,9 @@
         android:layout_height="wrap_content"
         android:layout_x="193dp"
         android:layout_y="497dp"
-        android:text="Login" />
+        android:onClick="send_login_details"
+        android:text="@string/button_send" />
+
 
     <ImageView
         android:id="@+id/imageView3"
