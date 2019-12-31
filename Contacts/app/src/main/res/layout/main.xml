@@ -42,17 +42,16 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="122dp"
-        android:layout_y="283dp"
+        android:layout_x="137dp"
+        android:layout_y="242dp"
         android:text="Enter Login details" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="77dp"
-        android:layout_y="13dp"
-        app:srcCompat="@drawable/login_image"
-        android:contentDescription="TODO" />
+        android:layout_x="60dp"
+        android:layout_y="4dp"
+        app:srcCompat="@drawable/login_image" />
 
 </AbsoluteLayout>

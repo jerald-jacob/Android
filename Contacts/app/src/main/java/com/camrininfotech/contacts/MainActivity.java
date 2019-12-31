@@ -29,4 +29,16 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    public void check(View view, Character car) {
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        EditText editText = (EditText) findViewById(R.id.editText);
+        EditText editText1=(EditText)findViewById(R.id.editText2);
+        String password=editText1.getText().toString();
+        String username = editText.getText().toString();
+        intent.putExtra(USERNAME, username);
+        intent.putExtra(PASSWORD,password);
+        startActivity(intent);
+
+
+    }
 }

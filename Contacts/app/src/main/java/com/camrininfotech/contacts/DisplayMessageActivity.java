@@ -25,6 +25,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
     textView.setText("jacob");
     TextView textView1=findViewById(R.id.textView1);
     textView1.setText(password);
+    setContentView(R.layout.key);
 }
 else{
     TextView textView = findViewById(R.id.textView);
