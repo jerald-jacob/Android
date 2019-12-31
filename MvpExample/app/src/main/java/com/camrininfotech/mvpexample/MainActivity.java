@@ -7,9 +7,9 @@ import android.widget.Toast;
 
 import com.camrininfotech.mvpexample.model.SignInPresenterImplemantation;
 import com.camrininfotech.mvpexample.presenter.SignInPresenter;
-import com.camrininfotech.mvpexample.view.SigninView;
+import com.camrininfotech.mvpexample.view.SignInView;
 
-public class MainActivity extends AppCompatActivity implements SigninView {
+public class MainActivity extends AppCompatActivity implements SignInView {
 
     private SignInPresenter signInPresenter;
     @Override
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements SigninView {
 
     @Override
     public void showValidationError() {
-        Toast.makeText(MainActivity.this,"faild",Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this,"failed",Toast.LENGTH_LONG).show();
     }
 
     @Override
