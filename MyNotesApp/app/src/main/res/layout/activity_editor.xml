@@ -14,23 +14,23 @@
 
         <EditText
             android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:hint="@string/to_do"
+            android:textSize="25sp"
             android:inputType="textCapSentences"
-            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             tools:ignore="Autofill" />
 
         <EditText
             android:id="@+id/note"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/title"
-            android:layout_margin="20dp"
-            android:gravity="top|start"
+            android:layout_below="@id/title"
             android:hint="@string/enter_note"
             android:inputType="textMultiLine"
             android:minLines="6"
+            android:gravity="top|start"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             tools:ignore="Autofill" />
     </RelativeLayout>
 </androidx.core.widget.NestedScrollView>
