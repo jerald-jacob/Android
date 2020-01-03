@@ -24,7 +24,7 @@ public class EditorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor);
-        et_title = findViewById(R.id.showTitle);
+        et_title = findViewById(R.id.title);
         et_note = findViewById(R.id.note);
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("please wait ...");
@@ -41,7 +41,6 @@ public class EditorActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.save:
-
                 String title = et_title.getText().toString().trim();
                 String note = et_note.getText().toString().trim();
                 int color = -2184710;
