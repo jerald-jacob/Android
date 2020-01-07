@@ -33,14 +33,14 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-        getPosts();
+        //getPosts();
         //getComments();
-
+        createPost();
     }
 
     private void getPosts() {
         Map<String,String>parameters=new HashMap<>();
-        parameters.put("userId","1");
+        parameters.put("userId","2");
         parameters.put("_sort","id");
         parameters.put("order","desc");
         Call<List<Post>> call = jsonPlaceHolderApi.getPosts(parameters);
@@ -102,6 +102,33 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Comment>> call, Throwable t) {
+                textViewResult.setText(t.getMessage());
+            }
+        });
+    }
+    private void createPost(){
+        Post post=new Post(23,"new title","new test");
+        Call<Post>call=jsonPlaceHolderApi.createPost(post);
+        call.enqueue(new Callback<Post>() {
+            @Override
+            public void onResponse(Call<Post> call, Response<Post> response) {
+                if(!response.isSuccessful()){
+                    textViewResult.setText("code:"+response.code());
+                    return;
+                }
+                Post postResponse=response.body();
+                String content = "";
+                content +=+response.code()+"\n";
+                content += "ID: " + postResponse.getId() + "\n";
+                content += "User ID: " + postResponse.getUserId() + "\n";
+                content += "Title: " + postResponse.getTitle() + "\n";
+                content += "Text: " + postResponse.getText() + "\n\n";
+                textViewResult.setText(content);
+
+            }
+
+            @Override
+            public void onFailure(Call<Post> call, Throwable t) {
                 textViewResult.setText(t.getMessage());
             }
         });
